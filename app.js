@@ -7,7 +7,7 @@ const fs = require('fs');
 readline.question('Nama : ', name => {
     readline.question('Phone : ', phone => {
         readline.question('Email : ', email => {
-            const contacts = JSON.parse(fs.readFileSync('contacts.json'));
+            const contacts = JSON.parse(fs.readFileSync('contacts.json', 'utf-8'));
             const contact = {
                 name,
                 phone,
